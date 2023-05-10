@@ -15,7 +15,7 @@ async function index(req,res,next) {
 async function create(req,res,next) {
   try {
     // create new person
-    res.json(await Blog.create(req.body));
+    res.status(201).json(await Blog.create(req.body));
   } catch (error) {
     //send error
     res.status(400).json(error);
@@ -67,6 +67,6 @@ module.exports = {
 	index,
 	create,
 	getOne: detail,
-    delete: destroy,
-    update
+  delete: destroy,
+  update
 }

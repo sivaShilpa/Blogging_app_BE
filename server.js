@@ -14,10 +14,10 @@ app.use(express.json());
 app.use(cors())
 app.use(morgan("dev"))
 
-app.use('/blog', blogRouter)
+app.use('/blogs', blogRouter)
 
 app.get("/", (req, res) => {
-    res.send("hello world");
+    res.redirect('/blogs')
 });
 
 app.listen(PORT, () => console.log(`listening on PORT ${PORT}`));
