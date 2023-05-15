@@ -5,7 +5,7 @@ const blogCtrl = require('../controllers/blogging_controller')
 
 router.get("/", blogCtrl.index);
 
-router.post("/", blogCtrl.create);
+router.post("/blogs", blogCtrl.create);
 
 router.get("/:id", blogCtrl.getOne);
 
